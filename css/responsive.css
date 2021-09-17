@@ -1,0 +1,225 @@
+
+ @media screen and (min-width:1023px){
+     /* header */
+     h2{
+         font-size: 2.5em !important;
+     }
+     p, span{
+        font-size: 1.2em;
+     }
+    .top-bar__item{
+        width: 100px;
+    }
+    .side-margin{
+        margin: 10px 10% 0;
+        padding: 10px 0;
+    }
+    .side-container__icons{
+        display: none;
+    }
+    .searcher{
+        display: none;
+    }
+    .searcher-desktop{
+        position: relative;
+    }
+    .search__form input{
+        width: 31.25em;
+    }
+    .search__form__submit{
+        top: 4px;
+        right: 5px;
+    }
+    .side-container__icons-desktop{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-gap: 1%;
+    }
+    .side-container__svg {
+        width: 10em;
+    }
+    .side-icons{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .side-icons__items{
+        padding-right: 20px;
+    }
+    .svg-icon{
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .re-nav-info{
+        padding: 10px 0;
+    }
+    .re-nav-info__item{
+        margin-left: 40px;
+    }
+    .re-nav-info__link span{
+        font-size: 1.1em;
+    }
+    .stores, .points{
+        display: block;
+    }
+    
+
+    /* main */
+
+    /* section product-sales */
+    .product-sales{
+        padding: 30px 5% 0;
+    }
+    .product-sales__principal img{
+        content: url("./../assets/img/img1.png");
+    }
+    .product-sales__list{
+        grid-template-columns: repeat(4,1fr);
+        padding: 30px 0 30px;
+    }
+    .product-sales__items h4{
+        font-size: 1.7em;
+    }
+    .product-sales__more {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1%;
+    }
+    .product-sales__link-item:last-child {
+        padding: 0;
+    }
+
+    /* Department */
+    .department{
+        padding: 60px 5% 0px;
+    }
+    .department__products{
+        grid-template-columns: repeat(6,1fr);
+        grid-gap: 1%;
+        padding: 40px 0;
+    }
+
+    .department__cars img{
+        content: url("./../assets/img/img8.png");
+    }
+
+    /* hardware-store */
+    .hardware-store{
+        padding: 60px 5% 0px;
+    }
+
+    /* hardware-essential */
+    .hardware-essential{
+        padding: 60px 5% 0px;
+    }
+
+    /* Brands */
+    .brands{
+        padding: 30px 5% 20px;
+    }
+    .brands h2{
+        padding-bottom: 20px;
+    }
+
+    .brands__name{
+        height: 100px;
+    }
+    .brands__item img{
+        height: 3em;
+    }
+
+    /* tools */
+    .tool{
+        padding: 30px 5% 20px;
+    }
+    .tool__products{
+        grid-template-columns: repeat(5,1fr);
+        grid-gap: 35px;
+    }
+
+    /* electric */
+    .electric{
+        padding: 30px 5% 20px;
+    }
+    .electric__products{
+        grid-template-columns: repeat(5,1fr);
+        grid-gap: 35px;
+    }
+    .electric__material{
+        content: url("./../assets/img/img9.png");
+    }
+
+    /* pre-footer */
+    .pre-footer{
+        display: grid;
+        grid-template-columns: 3fr 1fr 3fr;
+        padding: 30px 5% 20px;
+    }
+    .pre-footer__container{
+        flex-direction: row;
+    }
+    .pre-footer__container img{
+        width: 9em;
+    }
+    .pre-footer__certication{
+        align-items: flex-start;
+        margin: 0 0 0 60px;
+    }
+    .pre-footer__certication p{
+        text-align: start;
+        font-size: 1.1em;
+    }
+    .pre-footer__layer{
+        display: block;
+        width: 1px;
+        height: 15rem;
+        margin: 0rem 50%;
+        border: 5px;
+        background-color: #acacac;
+    }
+    .pre-footer__subscribe{
+        align-items: flex-start;
+        margin-bottom: 40px;
+        margin-left: 50px;
+        width: auto;
+    }
+    .pre-footer_search {
+        width: 400px;
+    }
+
+    /*footer */
+    .footer__wrapper{
+        padding: 0 5%;
+    }
+    .footer__mob{
+        display: none;
+    }
+    .footer__desk{
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0;
+        color: var(--white);
+    }
+    .footer__block h6{
+        font-size: 1em;
+    }
+
+    .footer_item{
+        list-style: none;
+    }
+    .footer_item a{
+        text-decoration: none;
+        color: var(--white);
+        font-size: 0.7em;
+    }
+    .footer__list-network{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .footer__item-network{
+        list-style: none;
+    }
+    .footer__link-item svg{
+        width: 1.3em;
+        height: 1.3em;
+    }
+}
