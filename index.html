@@ -7,11 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    
+    
     <link rel="stylesheet" href="./css/normalize.min.css">
-    <link rel="stylesheet" href="./css/glider.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+    
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/responsive.css">
-    <title>Cemaco</title>
+
+    <link rel="shortcut icon" href="./assets/img/favicon.png">
+    <title>Cemaco | Tienda en línea</title>
 </head>
 <body>
    <header class="site-header">
@@ -238,12 +245,12 @@
         
    </header>
    <main>
-        <div class="pop-up">
+        <div id="pop-up" class="pop-up">
            <div class="pop-up__info">
                <p>Envió gratis en tu primera comprar, &nbsp</p>
                <a href=""><span> entérate aquí</span></a>
            </div>
-           <svg class="pop-up-svg-icon"><use xlink:href="#svg-icon-close">
+           <svg id="close" class="pop-up-svg-icon"><use xlink:href="#svg-icon-close">
             <svg id="svg-icon-close" viewBox="0 0 32 32"><title>Close</title><path fill="currentColor" d="M18.4,16L31.5,3.1C31.8,2.8,32,2.4,32,1.9c0-0.5-0.2-0.9-0.5-1.2c-0.3-0.3-0.7-0.5-1.2-0.5c-0.4,0-0.9,0.2-1.2,0.5L16,13.6             L2.9,0.5c-0.7-0.7-1.7-0.7-2.4,0c-0.7,0.7-0.7,1.7,0,2.4L13.6,16L0.5,28.9C0.2,29.2,0,29.6,0,30.1c0,0.5,0.2,0.9,0.5,1.2             c0.3,0.3,0.7,0.5,1.2,0.5c0.4,0,0.9-0.2,1.2-0.5L16,18.4l13.1,13.1c0.3,0.3,0.7,0.5,1.2,0.5c0.5,0,0.9-0.2,1.2-0.5             c0.7-0.7,0.7-1.7,0-2.4L18.4,16z"></path></svg>
            </use></svg>
        </div>
@@ -304,37 +311,59 @@
                     </a>
                 </div>
             </div>
-            <div class="department__products">
+
+            <div class="department__products" id="departmentProducts">
                 <div class="department__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAcab_desk.jpg" alt="">
-                    <p>Pinturas</p>
+                    <img src="assets/img/section-department/herramientas.png" alt="">
+                    <p>Herramientas</p>
                 </div>
                 <div class="department__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catElectronica_desk.jpg" alt="">
+                    <img src="assets/img/section-department/seguridad-industrial.png" alt="">
                     <p>Seguridad industrial</p>
                 </div>
                 <div class="department__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAutos_desk.jpg" alt="">
-                    <p>Herramientas</p>
-                </div>
-                <div class="department__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAcab_desk.jpg" alt="">
+                    <img src="assets/img/section-department/pinturas.png" alt="">
                     <p>Pinturas</p>
                 </div>
                 <div class="department__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catElectronica_desk.jpg" alt="">
-                    <p>Seguridad industrial</p>
+                    <img src="assets/img/section-department/materiales-de-construccion.png" alt="">
+                    <p>Materiales de construcción</p>
                 </div>
                 <div class="department__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAutos_desk.jpg" alt="">
-                    <p>Herramientas</p>
+                    <img src="assets/img/section-department/acabados.png" alt="">
+                    <p>Acabados</p>
                 </div>
                 <div class="department__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAutos_desk.jpg" alt="">
-                    <p>Herramientas</p>
+                    <img src="assets/img/section-department/iluminacion-electricos.png" alt="">
+                    <p>Iluminación y eléctricos</p>
+                </div>
+                <div class="department__item">
+                    <img src="assets/img/section-department/ferreteria.png" alt="">
+                    <p>Ferretería</p>
+                </div>
+                <div class="department__item">
+                    <img src="assets/img/section-department/organizacion.png" alt="">
+                    <p>Organización</p>
+                </div>
+                <div class="department__item">
+                    <img src="assets/img/section-department/plomeria.png" alt="">
+                    <p>Plomería</p>
+                </div>
+                <div class="department__item">
+                    <img src="assets/img/section-department/sanitarios-lavamanos.png" alt="">
+                    <p>Sanitarios y lavamanos</p>
+                </div>
+                <div class="department__item">
+                    <img src="assets/img/section-department/instalaciones-cocina.png" alt="">
+                    <p>Instalaciones de cocina</p>
+                </div>
+                <div class="department__item" id="watchMore">
+                    <img src="assets/img/section-department/ver-mas.png" alt="">
+                    <p>Ver más</p>
                 </div>
                 
             </div>
+
             <div class="department__cars">
                 <img src="assets/img/img11.png" alt="">
             </div>
@@ -429,7 +458,7 @@
                 </div>
 
                 <div class="brands__name">
-                    <ul class="brands__list" id="brands">
+                    <ul id="brands" class="brands__list">
                         <li class="brands__item">
                             <img src="assets/img/brands/ace.png" alt="">
                         </li>
@@ -475,31 +504,33 @@
                     </a>
                 </div>
             </div>
+
             <div class="tool__products">
                 <div class="tool__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAcab_desk.jpg" alt="">
-                    <p>Pinturas</p>
+                    <img src="assets/img/section-tools/accesorios-herramientas-electricas.png" alt="">
+                    <p>Herramientas eléctricas</p>
                 </div>
                 <div class="tool__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catElectronica_desk.jpg" alt="">
+                    <img src="assets/img/section-tools/herramientas-electricas.png" alt="">
+                    <p>Accesorios para herramientas eléctricas</p>
+                </div>
+                <div class="tool__item">
+                    <img src="assets/img/section-tools/herramientas-manuales.png" alt="">
+                    <p>Herramientas manuales</p>
+                </div>
+                <div class="tool__item">
+                    <img src="assets/img/section-tools/seguridad-industrial.png" alt="">
                     <p>Seguridad industrial</p>
                 </div>
                 <div class="tool__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAutos_desk.jpg" alt="">
-                    <p>Herramientas</p>
+                    <img src="assets/img/section-tools/Compresores-herramientas.png" alt="">
+                    <p>Compresores y herramientas neumáticas</p>
                 </div>
                 <div class="tool__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAcab_desk.jpg" alt="">
-                    <p>Pinturas</p>
+                    <img src="assets/img/section-tools/ver-mas.png" alt="">
+                    <p>Ver más</p>
                 </div>
-                <div class="tool__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catElectronica_desk.jpg" alt="">
-                    <p>Seguridad industrial</p>
-                </div>
-                <div class="tool__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAutos_desk.jpg" alt="">
-                    <p>Herramientas</p>
-                </div>
+                
                 
             </div>
         </section>
@@ -524,28 +555,28 @@
             </div>
             <div class="electric__products">
                 <div class="electric__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAcab_desk.jpg" alt="">
-                    <p>Pinturas</p>
+                    <img src="assets/img/electrist-department/accesorios-instalaciones-electricas.png" alt="">
+                    <p>Accesorios para instalaciones eléctricas</p>
                 </div>
                 <div class="electric__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catElectronica_desk.jpg" alt="">
-                    <p>Seguridad industrial</p>
+                    <img src="assets/img/electrist-department/bombillas-tubos.png" alt="">
+                    <p>Bombillas, tubos y más</p>
                 </div>
                 <div class="electric__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAutos_desk.jpg" alt="">
-                    <p>Herramientas</p>
+                    <img src="assets/img/electrist-department/cables-tuberias.png" alt="">
+                    <p>Cables, tuberías y accesorios eléctricos</p>
                 </div>
                 <div class="electric__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAcab_desk.jpg" alt="">
-                    <p>Pinturas</p>
+                    <img src="assets/img/electrist-department/extensiones.png" alt="">
+                    <p>Extensiones, ups y protectores de corriente</p>
                 </div>
                 <div class="electric__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catElectronica_desk.jpg" alt="">
-                    <p>Seguridad industrial</p>
+                    <img src="assets/img/electrist-department/lampara.png" alt="">
+                    <p>Lámparas de interior y exterior</p>
                 </div>
                 <div class="electric__item">
-                    <img src="assets/img/section-department/2021_cemaco_home_catAutos_desk.jpg" alt="">
-                    <p>Herramientas</p>
+                    <img src="assets/img/electrist-department/ver-mas.png" alt="">
+                    <p>Ver más</p>
                 </div>
                 
             </div>
@@ -603,26 +634,99 @@
    <footer>
         <div class="footer__wrapper">
             <div class="footer__mob">
-                <div class="footer__principal">
-                    <div class="footer__collapse">
-                        <h6>Servicios</h6>
-                    </div>
-                    <div class="footer__collapse">
-                        <h6>Venta en línea</h6>
-                    </div>
-                    <div class="footer__collapse">
-                        <h6>Nuestros Valores</h6>
-                    </div>
-                    <div class="footer__collapse">
-                        <div class="footer__collapse-cemaco">
-                            <h6>Grupo</h6>
-                            <svg class="footer__logo">
-                                <use href="#svg-icon-account-logo-footer">
-                                    <svg id="svg-icon-account-logo-footer" viewBox="0 0 131 25"><title>Logo Footer</title><path fill="currentColor" d="M72.7214,15.3676l3.177-5.7352,3.178,5.7352ZM75.8984.4559l-12.42,22.9412,5.488,1.147,2.311-4.875h8.954l2.311,4.875,5.777-1.147ZM12.64,19.0956c-4.0439,0-6.6436-2.8677-6.6436-6.8824A6.3462,6.3462,0,0,1,12.64,5.6176a7.1117,7.1117,0,0,1,3.4662,1.1471L14.6622.7426a8.0543,8.0543,0,0,0-2.6-.2867C5.13.4559.22,5.6176.22,12.5c0,7.1691,4.9105,12.0441,12.1318,12.0441a14.1752,14.1752,0,0,0,4.0439-.86c.8665-.2867.8665-.5735.8665-.5735l.2889-6.0221a1.0108,1.0108,0,0,1-.5777.2868A8.164,8.164,0,0,1,12.64,19.0956Zm86.9442,0c-4.044,0-6.644-2.8677-6.644-6.8824a6.3466,6.3466,0,0,1,6.644-6.5956,7.1106,7.1106,0,0,1,3.466,1.1471L101.6064.7426a8.0561,8.0561,0,0,0-2.6-.2867A11.8034,11.8034,0,0,0,86.8754,12.5c0,7.1691,4.91,12.0441,12.131,12.0441a14.166,14.166,0,0,0,4.044-.86c.867-.5735,1.156-.5735,1.156-.5735l.289-6.0221a1.0113,1.0113,0,0,1-.578.2868A8.1674,8.1674,0,0,1,99.5844,19.0956Zm18.775,0a6.7564,6.7564,0,0,1-6.643-6.8824,6.9442,6.9442,0,0,1,6.643-6.8823,6.7572,6.7572,0,0,1,6.644,6.8823A6.7573,6.7573,0,0,1,118.3594,19.0956Zm0-18.64c-6.643,0-12.42,5.4485-12.42,12.0441a12.2263,12.2263,0,0,0,12.42,12.0441c6.644,0,12.421-5.4485,12.421-12.0441C130.78,5.6176,125.2924.4559,118.3594.4559Zm-61.8138,0-7.51,14.0514L41.8142.4559,35.46,23.6838l5.777.86,2.022-10.897,5.4881,10.897L54.8125,13.36l2.022,11.1838,5.7769-.86ZM25.6385,14.5073h6.0659V9.6324H25.6385V5.6176h8.3767L32.86.7426H19.8615V23.6838H33.1487l1.4442-4.875H25.6385Z"></path></svg>
-                                </use>
-                            </svg>
+                <div id="footerPrincipal" class="footer__principal">
+
+                    <div class="footer__collapse">  
+                        <div class="footer__collapse-button">
+                            <h6>Servicios</h6>
+                        </div>
+                        <div class="footer__item-collapse">
+                            <a href="">
+                                <p>Instalaciones</p>
+                            </a>
+                            <a href="">
+                                <p>Tiendas</p>
+                            </a>
+                            <a href="">
+                                <p>Privilegio</p>
+                            </a>
+                            <a href="">
+                                <p>Servicio a Empresas</p>
+                            </a>
+                            <a href="">
+                                <p>Bodas</p>
+                            </a>
                         </div>
                     </div>
+
+                    <div class="footer__collapse">
+                        <div class="footer__collapse-button">
+                            <h6>Venta en línea</h6>
+                        </div>
+                        <div class="footer__item-collapse">
+                            <a href="">
+                                <p>Retira en tienda</p>
+                            </a>
+                            <a href="">
+                                <p>Métodos de pago</p>
+                            </a>
+                            <a href="">
+                                <p>Preguntas frecuentes</p>
+                            </a>
+                            <a href="">
+                                <p>Privacidad y seguridad</p>
+                            </a>
+                            <a href="">
+                                <p>Términos y condiciones</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer__collapse">
+                        <div class="footer__collapse-button">
+                            <h6>Nuestros Valores</h6>
+                        </div>
+                        <div class="footer__item-collapse">
+                            <a href="">
+                                <p>Sostenibilidad</p>
+                            </a>
+                            <a href="">
+                                <p>Garantia total</p>
+                            </a>
+                            <a href="">
+                                <p>Certificación Sistema B</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer__collapse">
+                        <div class="footer__collapse-button">
+                                    <h6>Grupo</h6>
+                                    <svg class="footer__logo">
+                                        <use href="#svg-icon-account-logo-footer">
+                                            <svg id="svg-icon-account-logo-footer" viewBox="0 0 131 25"><title>Logo Footer</title><path fill="currentColor" d="M72.7214,15.3676l3.177-5.7352,3.178,5.7352ZM75.8984.4559l-12.42,22.9412,5.488,1.147,2.311-4.875h8.954l2.311,4.875,5.777-1.147ZM12.64,19.0956c-4.0439,0-6.6436-2.8677-6.6436-6.8824A6.3462,6.3462,0,0,1,12.64,5.6176a7.1117,7.1117,0,0,1,3.4662,1.1471L14.6622.7426a8.0543,8.0543,0,0,0-2.6-.2867C5.13.4559.22,5.6176.22,12.5c0,7.1691,4.9105,12.0441,12.1318,12.0441a14.1752,14.1752,0,0,0,4.0439-.86c.8665-.2867.8665-.5735.8665-.5735l.2889-6.0221a1.0108,1.0108,0,0,1-.5777.2868A8.164,8.164,0,0,1,12.64,19.0956Zm86.9442,0c-4.044,0-6.644-2.8677-6.644-6.8824a6.3466,6.3466,0,0,1,6.644-6.5956,7.1106,7.1106,0,0,1,3.466,1.1471L101.6064.7426a8.0561,8.0561,0,0,0-2.6-.2867A11.8034,11.8034,0,0,0,86.8754,12.5c0,7.1691,4.91,12.0441,12.131,12.0441a14.166,14.166,0,0,0,4.044-.86c.867-.5735,1.156-.5735,1.156-.5735l.289-6.0221a1.0113,1.0113,0,0,1-.578.2868A8.1674,8.1674,0,0,1,99.5844,19.0956Zm18.775,0a6.7564,6.7564,0,0,1-6.643-6.8824,6.9442,6.9442,0,0,1,6.643-6.8823,6.7572,6.7572,0,0,1,6.644,6.8823A6.7573,6.7573,0,0,1,118.3594,19.0956Zm0-18.64c-6.643,0-12.42,5.4485-12.42,12.0441a12.2263,12.2263,0,0,0,12.42,12.0441c6.644,0,12.421-5.4485,12.421-12.0441C130.78,5.6176,125.2924.4559,118.3594.4559Zm-61.8138,0-7.51,14.0514L41.8142.4559,35.46,23.6838l5.777.86,2.022-10.897,5.4881,10.897L54.8125,13.36l2.022,11.1838,5.7769-.86ZM25.6385,14.5073h6.0659V9.6324H25.6385V5.6176h8.3767L32.86.7426H19.8615V23.6838H33.1487l1.4442-4.875H25.6385Z"></path></svg>
+                                        </use>
+                                    </svg>
+                        </div>
+                        <div class="footer__item-collapse">
+                                <a href="">
+                                    <p>Únete a nuestro equipo</p>
+                                </a>
+                                <a href="">
+                                    <p>Sobre nosotros</p>
+                                </a>
+                                <a href="">
+                                    <p>Deseas ser proveedor</p>
+                                </a>
+                                <a href="">
+                                    <p>Juguetón</p>
+                                </a>
+                                <a href="">
+                                    <p>Bebé juguetón</p>
+                                </a>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="footer__contact">
                     <a href="" class="footer__contact-link">
@@ -792,7 +896,7 @@
                             <a href="">Deseas ser proveedor</a>
                         </li>
                         <li class="footer_item">
-                            <a href="">SJuguetón</a>
+                            <a href="">Juguetón</a>
                         </li>
                         <li class="footer_item">
                             <a href="">Bebé juguetón</a>
@@ -872,8 +976,9 @@
         </div>
    </footer>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-   <script src="./js/carrusel/glider.js"></script>
+   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/carrusel/slick.min.js"></script>
    <script src="./js/app.js"></script>
 </body>
 </html>

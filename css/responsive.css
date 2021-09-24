@@ -1,4 +1,27 @@
 
+ @media screen and (min-width:600px){
+
+/* Department */
+    .department__item img{
+        height: 100px;
+    }
+
+    /* tools */
+    .tool__products{
+        grid-row-gap: 10px;
+    }
+    .tool__item img {
+        width: auto;
+        height: 180px;
+    }
+
+    /* electric */
+    .electric__item img {
+        width: auto;
+        height: 180px;
+    }
+ }
+
  @media screen and (min-width:1023px){
      /* header */
      h2{
@@ -96,7 +119,9 @@
         grid-gap: 1%;
         padding: 40px 0;
     }
-
+    .department__item img{
+        height: 150px;
+    }
     .department__cars img{
         content: url("./../assets/img/img8.png");
     }
@@ -104,6 +129,20 @@
     /* hardware-store */
     .hardware-store{
         padding: 60px 5% 0px;
+    }
+    .hardware-store__list{
+        width: 100%;
+    }
+    .hardware-store__item{
+        height: 350px !important;
+    }
+    .hardware-store__more{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    .hardware-store__more p{
+        margin-bottom: 10px;
     }
 
     /* hardware-essential */
@@ -132,7 +171,9 @@
     }
     .tool__products{
         grid-template-columns: repeat(5,1fr);
-        grid-gap: 35px;
+    }
+    .tool__item:last-child{
+        display: none;
     }
 
     /* electric */
@@ -141,12 +182,13 @@
     }
     .electric__products{
         grid-template-columns: repeat(5,1fr);
-        grid-gap: 35px;
     }
     .electric__material{
         content: url("./../assets/img/img9.png");
     }
-
+    .electric__item:last-child{
+        display: none;
+    }
     /* pre-footer */
     .pre-footer{
         display: grid;

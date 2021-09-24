@@ -1,4 +1,24 @@
+const dataProducts = [
+  {
+      "name":"Autos y motos",
+      "img": "assets/img/section-department/autos-motos.png"
+  },
+  {
+      "name":"Jardín",
+      "img": "assets/img/section-department/jardin.png"
+  },
+  {
+      "name":"Seguridad en casa",
+      "img": "assets/img/section-department/seguridad-casa.png"
+  },
 
+]
+
+const containerProducts = document.querySelector("#departmentProducts");
+const watchMore = document.querySelector("#watchMore");
+const buttonCollapse = document.querySelector("#footerPrincipal");
+const popUpContainer = document.querySelector("#pop-up")
+const closePop= document.querySelector("#close");
 
 const getServer = (opc,divRender) => {
 
@@ -15,6 +35,7 @@ const getServer = (opc,divRender) => {
     
         response.forEach(r => {
             const producto = `<div class="hardware-store__item">
+                <div>
                     <div class="hardware-store__item-img">
                         <img src="${r.img}" alt="">
                         <svg class="svg-icon-wishlist">
@@ -39,6 +60,8 @@ const getServer = (opc,divRender) => {
                     <h3>${r.nombre}</h3>
                     <div class="hardware-store__star">  
                     </div>
+                </div>
+                <div>
                     <div class="hardware-store__price">
                         <span>Desde</span>
                         <p>Q${r.precio}</p>
@@ -48,6 +71,7 @@ const getServer = (opc,divRender) => {
                         <button type="text">Ver más</button>
                     </div>
                 </div>
+            </div>
             `;
     
             document.getElementById(divRender).innerHTML += producto;
@@ -66,131 +90,143 @@ const getServer = (opc,divRender) => {
         }
 
         console.log("cargo imagenes..");
+       
     
-        new Glider(document.querySelector('#'+divRender), {
-            slidesToShow: 6, //'auto',
-            slidesToScroll: 2,
-            itemWidth: 100,
-            draggable: true,
-            scrollLock: false,
-            rewind: true,
-            arrows: {
-                prev: '#'+flechaIzq,
-                next: '#'+flechaDer,
-            },
-            responsive: [
-                {
-                    breakpoint: 1600,
-                    settings: {
-                        slidesToScroll: 1,
-                        slidesToShow: 6,
-                        exactWidth: true
-                    }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToScroll: 1,
-                        slidesToShow: 4,
-                        exactWidth: true
-                    }
-                },
-                {
-                    breakpoint: 700,
-                    settings: {
-                        slidesToScroll: 1,
-                        slidesToShow: 4,
-                        dots: false,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToScroll: 1,
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 500,
-                    settings: {
-                        slidesToScroll: 1,
+        $(document).ready(function(){
+            $('#'+divRender).slick({
+                infinite: true,
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                variableWidth: true,
+                autoplay: false,
+                prevArrow: $('#'+flechaIzq),
+                nextArrow: $('#'+flechaDer),   
+                responsive: [
+                    {
+                      breakpoint: 1024,
+                      settings: {
                         slidesToShow: 3,
-                        dots: false,
-                        arrows: false,
-                        scrollLock: true
-                    }
-                },
-                {
-                    breakpoint: 420,
-                    settings: {
                         slidesToScroll: 1,
+                        infinite: true,
+                      }
+                    },
+                    {
+                      breakpoint: 700,
+                      settings: {
                         slidesToShow: 2,
-                        dots: false,
-                        arrows: false,
-                        scrollLock: true
+                        slidesToScroll: 1
+                      }
+                    },
+                    {
+                      breakpoint: 500,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                      }
                     }
-                }
-            ]
-        });
-    
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                  ]
+            });
+          });
     
     })
 
 }
 
-
 getServer("productos","productos");
-
 getServer("herramientas","herramientas");
 
 
-new Glider(document.querySelector('#brands'), {
-    slidesToShow: 6, //'auto',
-    slidesToScroll: 2,
-    itemWidth: 150,
-    draggable: true,
-    scrollLock: false,
-    dots: '',
-    rewind: true,
-    arrows: {
-        prev: '#brand-left',
-        next: '#brand-right'
-    },
-    responsive: [
-        {
-            breakpoint: 800,
-            settings: {
-                slidesToScroll: 'auto',
-                itemWidth: 300,
-                slidesToShow: 'auto',
-                exactWidth: true
-            }
-        },
-        {
-            breakpoint: 700,
-            settings: {
-                slidesToScroll: 4,
-                slidesToShow: 4,
-                dots: false,
-                arrows: false,
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToScroll: 3,
-                slidesToShow: 3
-            }
-        },
-        {
-            breakpoint: 500,
-            settings: {
-                slidesToScroll: 2,
+
+$(document).ready(function(){
+    $('#brands').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // variableWidth: false,
+        // adaptiveHeight: true,
+        autoplay: true,
+        arrows:true,
+        prevArrow: $('#brand-left'),
+        nextArrow: $('#brand-right'),   
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows:true,
+              }
+            },
+            {
+              breakpoint: 700,
+              settings: {
                 slidesToShow: 2,
-                dots: false,
-                arrows: false,
-                scrollLock: true
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 500,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              }
             }
-        }
-    ]
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+    });
+  });
+
+
+buttonCollapse.childNodes.forEach(item=>{
+  if(item.childNodes[1] !== undefined){
+      item.childNodes[1].addEventListener('click', (evt)=>{
+
+        const sib = evt.target.parentElement;
+        const content = sib.nextElementSibling;
+
+        console.log(content);
+
+            sib.classList.toggle('footer__collapse-button-active');
+            content.classList.toggle('footer__collapse-active');
+
+        })  
+  }
+})
+
+
+watchMore.addEventListener("click",()=>{
+    watchMore.className = "department__item-active";
+    getData(dataProducts,containerProducts);
 });
+
+const getData = (list,parentContain)=>{
+    list.forEach(item=>{
+
+        const allItems = []
+
+        const img = document.createElement("img");
+        img.src= item.img; 
+
+        const name = document.createElement("p");
+        name.textContent = item.name;
+
+        const container = document.createElement("div");
+        container.className = "department__item";
+
+        container.append(img,name);
+        
+        allItems.push(container);
+
+        parentContain.appendChild(...allItems);
+    })
+}
+
+closePop.addEventListener("click",()=>{
+  popUpContainer.className ="pop-up-active";
+})
